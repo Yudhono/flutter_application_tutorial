@@ -60,9 +60,23 @@ class _CustomLoginScreenState extends State<CustomLoginScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Spacer(),
-            Image.asset('assets/Login.png'),
+            Image.asset(
+              'assets/Login.png',
+            ),
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  'Login',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
             const SizedBox(
-              height: 40,
+              height: 10,
             ),
             TextField(
               focusNode: _usernameFocusNode,
@@ -99,7 +113,10 @@ class _CustomLoginScreenState extends State<CustomLoginScreen> {
                   backgroundColor: WidgetStateProperty.all(Colors.blue),
                   minimumSize:
                       WidgetStateProperty.all(const Size(double.infinity, 50))),
-              child: const Text('Login'),
+              child: const Text(
+                'Login',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
             ),
             const SizedBox(
               height: 25,
