@@ -1,9 +1,14 @@
+import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_tutorial/app.dart';
 import 'package:flutter_application_tutorial/custom_login_screen.dart';
 import 'package:flutter_application_tutorial/models/person.dart';
+import 'package:flutter_application_tutorial/counter_observer.dart';
 
 void main() {
-  runApp(const MainApp());
+  Bloc.observer = const CounterObserver();
+  // runApp(const MainApp());
+  runApp(const CounterApp());
 }
 
 class MainApp extends StatelessWidget {
